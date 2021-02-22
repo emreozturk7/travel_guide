@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:tokat_gezi_rehberi/detail_page.dart';
-import 'constants.dart';
+import 'colors.dart';
 import 'data.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,8 +65,8 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               PageRouteBuilder(
-                                pageBuilder: (context, a, b) => DetaiPage(
-                                  planetInfo: gezilecek_yerler[index],
+                                pageBuilder: (context, a, b) => DetailPage(
+                                  gezilecekYerBilgi: gezilecek_yerler[index],
                                 ),
                               ),
                             );
@@ -106,7 +106,8 @@ class _HomePageState extends State<HomePage> {
                                                 size: 15,
                                               ),
                                               Text(
-                                                gezilecek_yerler[index].location,
+                                                gezilecek_yerler[index]
+                                                    .location,
                                                 style: TextStyle(
                                                   fontFamily: 'Avenir',
                                                   fontSize: 16,
@@ -146,7 +147,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Hero(
                                 tag: gezilecek_yerler[index].position,
-                                child: Image.asset(gezilecek_yerler[index].iconImage),
+                                child: Image.asset(
+                                    gezilecek_yerler[index].iconImage),
                               ),
                             ],
                           ),

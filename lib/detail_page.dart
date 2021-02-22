@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tokat_gezi_rehberi/constants.dart';
-import 'package:tokat_gezi_rehberi/data.dart';
+import 'package:tokat_gezi_rehberi/colors.dart';
+import 'data.dart';
 
-class DetaiPage extends StatelessWidget {
-  final PlanetInfo planetInfo;
+class DetailPage extends StatelessWidget {
+  final GezilecekYerBilgi gezilecekYerBilgi;
 
-  const DetaiPage({Key key, this.planetInfo}) : super(key: key);
+  const DetailPage({Key key, this.gezilecekYerBilgi}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class DetaiPage extends StatelessWidget {
                           height: 300,
                         ),
                         Text(
-                          'Taşhan',
+                          '${gezilecekYerBilgi.name}',
                           style: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 56,
@@ -37,7 +37,7 @@ class DetaiPage extends StatelessWidget {
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          'Tokat/Merkez',
+                          '${gezilecekYerBilgi.location}',
                           style: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 31,
@@ -49,7 +49,7 @@ class DetaiPage extends StatelessWidget {
                         Divider(color: Colors.black38),
                         SizedBox(height: 32),
                         Text(
-                          planetInfo.description ?? '',
+                          gezilecekYerBilgi.description ?? '',
                           maxLines: 5,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -80,7 +80,7 @@ class DetaiPage extends StatelessWidget {
                   Container(
                     height: 250,
                     child: ListView.builder(
-                        itemCount: planetInfo.images.length,
+                        itemCount: gezilecekYerBilgi.images.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Card(
@@ -91,7 +91,7 @@ class DetaiPage extends StatelessWidget {
                             child: AspectRatio(
                               aspectRatio: 1,
                               child: Image.network(
-                                planetInfo.images[index],
+                                gezilecekYerBilgi.images[index],
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -104,15 +104,15 @@ class DetaiPage extends StatelessWidget {
             Positioned(
               right: -64,
               child: Hero(
-                tag: planetInfo.position,
-                child: Image.asset(planetInfo.iconImage),
+                tag: gezilecekYerBilgi.position,
+                child: Image.asset(gezilecekYerBilgi.iconImage),
               ),
             ),
             Positioned(
               top: 60,
               left: 32,
               child: Text(
-                planetInfo.position.toString(),
+                gezilecekYerBilgi.position.toString(),
                 style: TextStyle(
                   fontFamily: 'Avenir',
                   fontSize: 247,
