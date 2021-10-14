@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 500,
                     child: Swiper(
-                      itemCount: gezilecek_yerler.length,
+                      itemCount: gezilecekYerler.length,
                       itemWidth: MediaQuery.of(context).size.width - 2 * 64,
                       layout: SwiperLayout.STACK,
                       pagination: SwiperPagination(
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                               context,
                               PageRouteBuilder(
                                 pageBuilder: (context, a, b) => DetailPage(
-                                  gezilecekYerBilgi: gezilecek_yerler[index],
+                                  gezilecekYerBilgi: gezilecekYerler[index],
                                 ),
                               ),
                             );
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                                         children: <Widget>[
                                           SizedBox(height: 180),
                                           Text(
-                                            gezilecek_yerler[index].name,
+                                            gezilecekYerler[index].name,
                                             style: TextStyle(
                                               fontFamily: 'Avenir',
                                               fontSize: 25,
@@ -106,8 +106,7 @@ class _HomePageState extends State<HomePage> {
                                                 size: 15,
                                               ),
                                               Text(
-                                                gezilecek_yerler[index]
-                                                    .location,
+                                                gezilecekYerler[index].location,
                                                 style: TextStyle(
                                                   fontFamily: 'Avenir',
                                                   fontSize: 16,
@@ -146,9 +145,9 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                               Hero(
-                                tag: gezilecek_yerler[index].position,
+                                tag: gezilecekYerler[index].position,
                                 child: Image.asset(
-                                    gezilecek_yerler[index].iconImage),
+                                    gezilecekYerler[index].iconImage),
                               ),
                             ],
                           ),
@@ -160,32 +159,6 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
-            top: Radius.circular(36.0),
-          ),
-          color: navigationColor,
-        ),
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Image.asset('assets/images/menu_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/images/search_icon.png'),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Image.asset('assets/images/profile_icon.png'),
-              onPressed: () {},
-            ),
-          ],
         ),
       ),
     );

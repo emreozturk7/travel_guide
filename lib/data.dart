@@ -16,7 +16,7 @@ class GezilecekYerBilgi {
   });
 }
 
-List<GezilecekYerBilgi> gezilecek_yerler = [
+List<GezilecekYerBilgi> gezilecekYerler = [
   GezilecekYerBilgi(
     1,
     name: 'Niksar Kalesi',
@@ -73,7 +73,7 @@ List<GezilecekYerBilgi> gezilecek_yerler = [
   GezilecekYerBilgi(
     5,
     name: 'Taşhan',
-    iconImage: 'assets/images/tashan6.jpg',
+    iconImage: 'assets/images/neptune.png',
     description:
         'Türkiye’nin en güzel hanlarından biri olan Taşhan, Anadolu’daki en büyük şehir hanlarındandır. Gaziosmanpaşa Bulvarı üzerindedir. 1626-1632 yılları arasında inşa edilmiş bir Osmanlı eseridir. Dikdörtgen planlı, açık avlulu, iki katlı bir yapıdır. İçeride dış dükkanların bulunduğu kuzey ve doğu yönünde revaksız işyerleri, güney ve batı yönünde ise önünde revak bulunan dükkanlar yer almaktadır. Giriş koridorunun sonunda sağdan ve soldan ikinci kata çıkılmaktadır. İkinci katta bütün odalar revaka açılmaktadır. Girişin üstünde kubbeli bir mekan vardır ve bu mekan konsollar üzerinde dışa taşmaktadır. Odalarda dışa açılan birer pencere, bir ocak ve niş bulunmaktadır. İçte 76 dışta toplam 103 mekan vardır. Anadolu’daki en büyük şehir hanlarındandır.',
     location: 'Tokat/Merkez',
