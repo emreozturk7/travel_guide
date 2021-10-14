@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:tokat_gezi_rehberi/constants.dart';
 import 'package:tokat_gezi_rehberi/detail_page.dart';
-import 'colors.dart';
 import 'data.dart';
 
 class HomePage extends StatefulWidget {

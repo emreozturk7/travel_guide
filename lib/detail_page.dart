@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tokat_gezi_rehberi/colors.dart';
+import 'package:tokat_gezi_rehberi/constants.dart';
 import 'data.dart';
 
 class DetailPage extends StatelessWidget {
