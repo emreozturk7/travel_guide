@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tokat_gezi_rehberi/home_page.dart';
+import 'package:tokat_gezi_rehberi/view/home_page.dart';
 
 void main() {
   runApp(MyApp());

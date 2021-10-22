@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tokat_gezi_rehberi/constants.dart';
-import 'data.dart';
+import '../data.dart';
 
 class DetailPage extends StatelessWidget {
   final GezilecekYerBilgi gezilecekYerBilgi;
