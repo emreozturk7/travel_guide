@@ -147,7 +147,8 @@ class _HomePageState extends State<HomePage> {
                               Hero(
                                 tag: gezilecekYerler[index].position,
                                 child: Image.asset(
-                                    gezilecekYerler[index].iconImage),
+                                  gezilecekYerler[index].iconImage,
+                                ),
                               ),
                             ],
                           ),
